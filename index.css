@@ -1,0 +1,65 @@
+h1 {
+  color: goldenrod;
+}
+
+body {
+  text-align: center;
+  background-color: green;
+  color: #fff;
+  margin-top: 5rem;
+  font-size: 2rem;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: bold;
+}
+
+#message-el,
+#input-name {
+  font-style: italic;
+}
+
+button,
+#submit-btn {
+  color: #016f32;
+  border: none;
+  background-color: goldenrod;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 2px;
+}
+
+#background-video {
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+#text-el {
+  border: none;
+  border-radius: 2px;
+  text-align: center;
+  width: 14rem;
+}
+
+#input-name {
+  font-weight: lighter;
+}
+
+#created-by {
+  font-size: 7px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: bold;
+}
+
+#clock {
+  display: flex;
+  justify-content: center;
+  margin-top: 10rem;
+}
