@@ -1,2 +1,2 @@
 # BlackJack-game
-<a href="https://www.w3schools.com">Visit a website</a>
+<a href="https://theabdlz7.github.io/BlackJack-game/">Live-demo</a>
