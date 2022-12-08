@@ -205,7 +205,7 @@ startGame.addEventListener("click", () => {
 newCard.addEventListener("click", () => {
   let card = getRandomNumber();
   cards.push(card);
-  let text = (sumEl.textContent = `Sum: ${sum + card}`);
+  let text = (sumEl.textContent = sum + card);
   let number = parseInt(text);
   console.log(number);
 
