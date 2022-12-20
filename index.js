@@ -32,7 +32,6 @@ let newCard = document.querySelector(`#newcard-btn`);
 let playerEl = document.querySelector(`#player-el`);
 let textEl = document.querySelector(`#text-el`);
 let submitBtn = document.querySelector(`#submit-btn`);
-let inputYourName = document.querySelector(`#input-name`);
 let welcomeEl = document.querySelector(`#welcome-el`);
 
 let newGame = document.querySelector(`#newgame-btn`);
@@ -118,7 +117,6 @@ submitBtn.addEventListener("click", () => {
   newCard.style.display = `inline-block`;
   newGame.style.display = `inline-block`;
 
-  inputYourName.style.display = `none`;
   submitBtn.style.display = `none`;
   textEl.style.display = `none`;
 

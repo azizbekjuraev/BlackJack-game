@@ -13,8 +13,11 @@ body {
   font-weight: bold;
 }
 
-#message-el,
-#input-name {
+#welcome-el {
+  font-size: 110px;
+}
+
+#message-el {
   font-style: italic;
 }
 
@@ -25,7 +28,9 @@ button,
   background-color: goldenrod;
   cursor: pointer;
   font-weight: bold;
-  border-radius: 2px;
+  border-radius: 2rem;
+  margin: 0.5rem;
+  padding: 0.5rem 4rem;
 }
 
 #background-video {
@@ -42,9 +47,13 @@ button,
 
 #text-el {
   border: none;
-  border-radius: 2px;
+  border-radius: 2rem;
   text-align: center;
-  width: 14rem;
+  padding: 0.5rem 0rem;
+}
+
+::placeholder {
+  font-size: 1rem;
 }
 
 #input-name {
