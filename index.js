@@ -12,17 +12,11 @@ let getRandomNumber = function (n) {
   }
 };
 
-console.log(getRandomNumber());
-
-//let firstCard = getRandomNumber();
-//let secondCard = getRandomNumber();
 let cards = [];
 let sum = 0;
-let hasBlackJack = false;
-let isAlive = false;
+let hasBlackJack,
+  isAlive = false;
 let message = "";
-
-console.log(cards);
 
 let sumEl = document.querySelector("#sum-el");
 let cardsEl = document.querySelector(`#cards-el`);
@@ -33,25 +27,16 @@ let playerEl = document.querySelector(`#player-el`);
 let textEl = document.querySelector(`#text-el`);
 let submitBtn = document.querySelector(`#submit-btn`);
 let welcomeEl = document.querySelector(`#welcome-el`);
-
 let newGame = document.querySelector(`#newgame-btn`);
 
 // Creating clock here
-
 let today = new Date();
-console.log(today);
-
 let hours = today.getHours();
-console.log(hours);
 let minutes = today.getMinutes();
-console.log(minutes);
 let seconds = today.getSeconds();
-console.log(seconds);
-
 let h = document.querySelector(`#hours`);
 let m = document.querySelector(`#minutes`);
 let s = document.querySelector(`#seconds`);
-
 h.textContent = `${hours}:`;
 m.textContent = `${minutes}:`;
 s.textContent = `${seconds}`;
@@ -82,8 +67,6 @@ let player = {
   },
 };
 
-//playerEl.textContent = player.name + `: $` + player.chips;
-
 function toCapital(name) {
   let nameTo = name[0].toUpperCase() + name.slice(1);
   return nameTo;
@@ -98,11 +81,8 @@ submitBtn.addEventListener("click", () => {
 
   let valueOfText = textEl.value;
   player.name = valueOfText;
-
-  console.log(valueOfText);
   playerEl.textContent = toCapital(player.name) + `: $` + player.chips;
-  alert(`${toCapital(player.name)} you have $${player.chips} in your account!`);
-
+  // alert(`${toCapital(player.name)} you have $${player.chips} in your account!`);
   textEl.value = " ";
 
   function styleChanger(element) {
@@ -122,9 +102,6 @@ submitBtn.addEventListener("click", () => {
 
   welcomeEl.textContent = `Welcome back, ${toCapital(player.name)}!`;
 });
-
-console.log(playerEl);
-console.log(player.sayHello());
 
 let start = function () {
   let firstCard = getRandomNumber();
@@ -155,7 +132,6 @@ let start = function () {
   // used for loop for cards array
   for (let i = 0; i < cards.length; i++) {
     cardsEl.textContent += ` ${cards[i]} `;
-    console.log(cards[i]);
   }
 };
 
@@ -190,25 +166,21 @@ let newGameStarter = function () {
   // used for loop for cards array
   for (let i = 0; i < cards.length; i++) {
     cardsEl.textContent += ` ${cards[i]} `;
-
-    console.log(cards[i]);
   }
 };
 
 startGame.addEventListener("click", () => {
   isAlive = true;
   start();
+  document.querySelector(`#newcard-btn`).disabled = false;
+  document.querySelector(`#newgame-btn`).disabled = false;
 });
 
 newCard.addEventListener("click", () => {
   let card = getRandomNumber();
   cards.push(card);
-  let text = (sumEl.textContent = sum + card);
-  let number = parseInt(text);
-  console.log(number);
-
-  console.log(typeof number);
-  console.log(typeof cardsEl);
+  let text = (sumEl.textContent = `Sum ${sum + card}`);
+  let number = sum + card;
   cardsEl.textContent += ` ${card}`;
 
   if (number <= 20) {
